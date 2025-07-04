@@ -20,6 +20,7 @@ body {
     color: var(--text-color);
 }
 
+/* Header Section */
 header {
     background-color: #f9f9f9;
     padding: 20px 0;
@@ -947,6 +948,7 @@ header {
     background: var(--primary-color);
 }
 
+/* Footer section */
 .site-footer {
     background: #0d0d0d;
     color: #ccc;

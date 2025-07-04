@@ -1,3 +1,4 @@
+// hamburger menu icon
 document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
