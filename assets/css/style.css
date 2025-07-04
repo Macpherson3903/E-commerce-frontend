@@ -27,7 +27,7 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
-.container {
+.sticky-header .container {
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
@@ -162,13 +162,17 @@ header {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .sticky-header .container nav {
+        width: 100%;
+    }
+
     .menu-toggle {
         display: block;
     }
 
     .nav-list {
         flex-direction: column;
-        width: 100%;
+        width: 50%;
         background-color: var(--secondary-color);
         max-height: 0;
         overflow: hidden;
@@ -181,7 +185,16 @@ header {
         display: flex;
         max-height: 500px;
         opacity: 1;
+        width: 100%;
+        border-top: 1px solid #ddd;
         padding: 10px 0;
+    }
+
+    .logo-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .nav-item {
@@ -189,10 +202,18 @@ header {
         text-align: left;
     }
 
+        .nav-item:hover::after {
+            width: 35%;   
+        }
+
     header .container {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
+    }
+
+    .header-two .container {
+        margin-top: 30px;
     }
 
     .header-extras {
@@ -354,7 +375,7 @@ header {
     color: black;
     padding: 0 2px;
     border-radius: 3px;
-}  
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -800,6 +821,7 @@ header {
     color: #ff9900;
     font-size: 0.9rem;
 }
+
 /* .btn-cart merged here to avoid duplicate selector */
 .btn-cart {
     background: #000;
