@@ -7,15 +7,30 @@
     <title>Contact Us - LOGO</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/744870fa52.js" crossorigin="anonymous"></script>
+
+    <!-- Importmap for GSAP -->
+    <script type="importmap">
+        {
+            "imports": {
+                "gsap": "https://cdn.skypack.dev/gsap",
+                "gsap/ScrollTrigger": "https://cdn.skypack.dev/gsap/ScrollTrigger"
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <!-- Header (Included from your existing code) -->
     <header class="sticky-header">
         <div class="container">
             <div class="logo-flex">
@@ -59,93 +74,72 @@
         </div>
     </header>
 
-    <main class="contact-main">
-        <section class="contact-hero">
-            <img src="assets/images/hero-contact.jpg" alt="Contact Hero" class="hero-bg">
-            <div class="hero-content">
-                <h1>Contact LOG<span class="highlight">O</span></h1>
-                <p>Get in Touch with Our Team for Expert Support</p>
-                <div class="hero-icons">
-                    <i class="fas fa-envelope animate-icon"></i>
-                    <i class="fas fa-phone-alt animate-icon"></i>
-                    <i class="fas fa-map-marker-alt animate-icon"></i>
-                </div>
-            </div>
-        </section>
+    <!-- Hero Section with Ken Burns Effect -->
+    <section class="hero-section">
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <h1 class="animate-fade">Contact Us</h1>
+            <p class="animate-fade">We're here to help with all your engineering tool needs. Reach out today!</p>
+        </div>
+    </section>
 
-        <section class="contact-form">
-            <div class="container">
-                <h2><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
-                <!-- Note: Add backend endpoint (e.g., /submit-contact) for form submission -->
-                <form class="contact-form-grid">
-                    <div class="form-item">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form animate-fade">
+                    <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
+                    <div class="form-container">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
                     </div>
-                    <div class="form-item">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-item form-item-full">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="form-button"><i class="fas fa-paper-plane"></i> Submit</button>
-                </form>
-                <div class="particle-bg">
-                    <i class="fas fa-circle particle"></i>
-                    <i class="fas fa-circle particle"></i>
-                    <i class="fas fa-circle particle"></i>
                 </div>
-            </div>
-        </section>
 
-        <section class="contact-info">
-            <div class="container">
-                <h2><i class="fas fa-info-circle"></i> Contact Information</h2>
-                <div class="info-grid">
+                <!-- Contact Info -->
+                <div class="contact-info animate-fade">
+                    <h2><i class="fas fa-info-circle"></i> Get in Touch</h2>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <h3>Address</h3>
                         <p>123 Builder Lane, Lagos, Nigeria</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone-alt"></i>
-                        <h3>Phone</h3>
                         <p>+234 812 345 6789</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
                         <p>support@example.com</p>
                     </div>
-                </div>
-                <div class="particle-bg">
-                    <i class="fas fa-circle particle"></i>
-                    <i class="fas fa-circle particle"></i>
-                    <i class="fas fa-circle particle"></i>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-map">
-            <div class="container">
-                <h2><i class="fas fa-map"></i> Find Us</h2>
-                <div class="map-placeholder">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3963.5654563496837!2d3.3493641117831294!3d6.576394222516458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMzQnMzUuMCJOIDPCsDIxJzA3LjAiRQ!5e0!3m2!1sen!2sng!4v1751731056535!5m2!1sen!2sng"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="particle-bg">
-                    <i class="fas fa-circle particle"></i>
-                    <i class="fas fa-circle particle"></i>
-                    <i class="fas fa-circle particle"></i>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Mon - Fri: 9 AM - 5 PM</p>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Map Section -->
+    <section class="map-section animate-fade">
+        <div class="container">
+            <h2><i class="fas fa-map"></i> Find Us</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.3752954147577575!3d6.527631645278336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1697054896142!5m2!1sen!2sng"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Included from your existing code) -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-column animate-fade">
@@ -160,16 +154,16 @@
             <div class="footer-column animate-fade">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="shop.html">Categories</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column animate-fade">
                 <h4>Information</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">About Us</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Use</a></li>
                     <li><a href="#">Returns</a></li>
@@ -178,13 +172,13 @@
             <div class="footer-column animate-fade">
                 <h4>Stay Updated</h4>
                 <p>Subscribe to get updates and offers.</p>
-                <form class="footer-newsletter">
+                <div class="footer-newsletter">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit">
                         <span class="visually-hidden">Subscribe</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
-                </form>
+                </div>
                 <div class="footer-socials">
                     <a href="#"><i class="fab fa-facebook-f"></i><span class="visually-hidden">Facebook</span></a>
                     <a href="#"><i class="fab fa-instagram"></i><span class="visually-hidden">Instagram</span></a>
@@ -202,10 +196,8 @@
         </button>
     </footer>
 
-    <script type="importmap">
-        {"imports":{"gsap":"https://cdn.skypack.dev/gsap","gsap/ScrollTrigger":"https://cdn.skypack.dev/gsap/ScrollTrigger"}}
-    </script>
-    <script type="module" src="assets/js/main.js"></script>
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
     <script type="module" src="assets/js/contact.js"></script>
 </body>
 
