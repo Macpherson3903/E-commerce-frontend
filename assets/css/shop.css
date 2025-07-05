@@ -738,7 +738,7 @@ header {
 
 /* Recently Viewed Section */
 .recently-viewed {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     padding: 1rem;
     background-color: #fff;
     border-radius: 8px;
@@ -747,10 +747,39 @@ header {
 }
 
 .recently-viewed h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.recently-viewed-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+}
+
+.recently-viewed-grid .product-item {
+    min-width: 180px;
+    min-height: 280px;
+}
+
+.recently-viewed-grid .product-item img {
+    height: 100px;
+}
+
+.recently-viewed-grid .product-item h2 {
+    font-size: 0.95rem;
+}
+
+.recently-viewed-grid .product-item .price,
+.recently-viewed-grid .product-item .brand,
+.recently-viewed-grid .product-item .rating {
+    font-size: 0.85rem;
+}
+
+.recently-viewed-grid .product-actions {
+    flex-direction: column;
 }
 
 /* Mobile Styles (max-width: 768px) */
