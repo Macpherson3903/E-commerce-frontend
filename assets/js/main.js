@@ -265,7 +265,6 @@ function searchPage() {
 }
 
 // footer section
-
 // Reveal on scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
