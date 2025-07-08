@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard - LOGO</title>
+    <title>Dashboard - LOGO</title>
     <link rel="stylesheet" href="../assets/css/dashboard.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/744870fa52.js" crossorigin="anonymous"></script>
@@ -20,20 +17,16 @@
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
     <!-- Header -->
     <header class="sticky-header">
         <div class="container">
-            <div class="logo-flex">
-                <div class="logo animate-logo">
-                    <a href="../index.html">LO<span class="highlight">GO</span></a>
-                </div>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars menu-icon"></i>
-                </div>
+            <div class="logo">
+                <a href="../index.html">LO<span class="highlight">GO</span></a>
             </div>
-
+            <div class="menu-toggle">
+                <i class="fas fa-bars menu-icon"></i>
+            </div>
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="../shop.html">Shop</a></li>
@@ -42,7 +35,6 @@
                     <li class="nav-item"><a href="../faq.html">FAQs/Help</a></li>
                 </ul>
             </nav>
-
             <div class="header-extras">
                 <div class="theme-toggle">
                     <button type="button" class="theme-toggle-btn" title="Toggle Theme">
@@ -96,18 +88,22 @@
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" value="John Doe" required>
+                    <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
                     <input type="text" id="address" value="123 Builder Lane, Lagos, Nigeria" required>
+                    <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" value="+234 812 345 6789" required>
+                    <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="password">New Password</label>
                     <input type="password" id="password" placeholder="Enter new password">
+                    <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <button type="button" class="delete-account-btn">Delete Account</button>
@@ -120,48 +116,108 @@
         </div>
     </div>
 
+    <!-- Activity Details Modal -->
+    <div class="activity-details-modal">
+        <div class="activity-details-content">
+            <h2>Activity Details</h2>
+            <div class="activity-details-body">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div class="form-actions">
+                <button type="button" class="close-activity-details">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications Modal -->
+    <div class="notifications-modal">
+        <div class="notifications-content">
+            <h2>Notifications</h2>
+            <div class="notifications-body">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div class="form-actions">
+                <button type="button" class="clear-notifications">Clear All</button>
+                <button type="button" class="close-notifications">Close</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main class="dashboard-main">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <button type="button" class="sidebar-toggle">
-                <i class="fas fa-angle-double-left"></i>
-            </button>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item active" data-section="dashboard">
-                    <i class="fas fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </li>
-                <li class="sidebar-item" data-section="orders">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span>My Orders</span>
-                </li>
-                <li class="sidebar-item" data-section="wishlist">
-                    <i class="fas fa-heart"></i>
-                    <span>Wishlist</span>
-                </li>
-                <li class="sidebar-item" data-section="address">
-                    <i class="fas fa-address-book"></i>
-                    <span>Address Book</span>
-                </li>
-                <li class="sidebar-item" data-section="account">
-                    <i class="fas fa-user"></i>
-                    <span>Account Info</span>
-                </li>
-                <li class="sidebar-item" data-section="password">
-                    <i class="fas fa-lock"></i>
-                    <span>Change Password</span>
-                </li>
-                <li class="sidebar-item" data-section="logout">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span>
-                </li>
-            </ul>
-        </aside>
-
-        <!-- Content Area -->
-        <section class="content-area">
-            <div class="dynamic-content"></div>
+        <section class="dashboard-content">
+            <h1>Dashboard</h1>
+            <div class="overview">
+                <h2>Overview</h2>
+                <button type="button" class="refresh-metrics-btn">Refresh Metrics</button>
+                <div class="overview-cards">
+                    <div class="dashboard-card">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>Total Orders</h3>
+                        <p class="metric-value">10</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Wishlist Items</h3>
+                        <p class="metric-value">5</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Pending Orders</h3>
+                        <p class="metric-value">2</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <i class="fas fa-user-check"></i>
+                        <h3>Account Status</h3>
+                        <p class="metric-value">Active</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="order-chart">
+                    <h2>Order History</h2>
+                    <div class="chart-controls">
+                        <div class="chart-filters">
+                            <select id="chartFilter">
+                                <option value="6months">Last 6 Months</option>
+                                <option value="12months">Last 12 Months</option>
+                                <option value="all">All Time</option>
+                            </select>
+                        </div>
+                        <div class="chart-type">
+                            <select id="chartType">
+                                <option value="line">Line Chart</option>
+                                <option value="bar">Bar Chart</option>
+                            </select>
+                        </div>
+                        <button type="button" class="export-chart-btn">Export Data</button>
+                    </div>
+                    <canvas id="orderChart"></canvas>
+                </div>
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-filter">
+                        <select id="activityFilter">
+                            <option value="all">All Activities</option>
+                            <option value="orders">Orders</option>
+                            <option value="wishlist">Wishlist</option>
+                            <option value="profile">Profile Updates</option>
+                        </select>
+                    </div>
+                    <ul class="activity-list">
+                        <!-- Populated by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <div class="links-container">
+                    <a href="../shop.html" class="quick-link-btn">Shop</a>
+                    <a href="orders.html" class="quick-link-btn">My Orders</a>
+                    <a href="wishlist.html" class="quick-link-btn">Wishlist</a>
+                    <a href="profile.html" class="quick-link-btn">Account Info</a>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -169,8 +225,8 @@
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-column animate-fade">
-                <h3 class="footer-logo">LOG<span class="highlight">O</span></h3>
-                <p>Your trusted partner in engineering &amp; construction tools.</p>
+                <h3 class="footer-logo">LO<span class="highlight">GO</span></h3>
+                <p>Your trusted partner in engineering & construction tools.</p>
                 <div class="footer-contact">
                     <p><i class="fas fa-map-marker-alt"></i> 123 Builder Lane, Lagos, Nigeria</p>
                     <p><i class="fas fa-phone-alt"></i> +234 812 345 6789</p>
@@ -197,7 +253,7 @@
             </div>
             <div class="footer-column animate-fade">
                 <h4>Stay Updated</h4>
-                <p>Subscribe to get updates &amp; offers.</p>
+                <p>Subscribe to get updates & offers.</p>
                 <form class="footer-newsletter">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit">
@@ -206,14 +262,10 @@
                     </button>
                 </form>
                 <div class="footer-socials">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i><span
-                            class="visually-hidden"></span></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i><span
-                            class="visually-hidden"></span></a>
-                    <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i><span
-                            class="visually-hidden"></span></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i><span
-                            class="visually-hidden"></span></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i><span class="visually-hidden"></span></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i><span class="visually-hidden"></span></a>
+                    <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i><span class="visually-hidden"></span></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i><span class="visually-hidden"></span></a>
                 </div>
             </div>
         </div>
@@ -232,5 +284,4 @@
     </script>
     <script type="module" src="../assets/js/dashboard.js"></script>
 </body>
-
 </html>
