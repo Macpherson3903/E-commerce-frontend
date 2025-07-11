@@ -206,15 +206,19 @@ body {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    height: 100%;
+    max-height: 650px;
+    /* Limit height to 650px */
     background: linear-gradient(to bottom, #f9f9f9, #e5e5e5);
-    border-radius: 0 5 5 0;
+    border-radius: 0 5px 5px 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 81px;
     left: 0;
-    /* z-index: 999; */
+    overflow-y: auto;
+    /* Scroll if content overflows */
     transition: transform 0.3s ease;
+    box-sizing: border-box;
+    padding-bottom: 20px;
 }
 
 .sidebar-list {
