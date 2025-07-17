@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateCart();
             gsap.to(input, { scale: 1.1, duration: 0.2, yoyo: true, repeat: 1 });
         });
-    });
+    }); 
 
     // Remove item
     document.querySelectorAll(".btn-remove").forEach(button => {
