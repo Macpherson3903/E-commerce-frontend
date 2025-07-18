@@ -1,7 +1,3 @@
-/**
- * Shop page JavaScript for Engineering Tools Shop
- * Handles filtering, sorting, cart, wishlist, comparison, and UI interactions
- */
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const elements = {

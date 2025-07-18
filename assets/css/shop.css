@@ -61,6 +61,11 @@ header {
     flex-wrap: wrap;
 }
 
+.product-link{
+    text-decoration: none;
+    color: var(--headline-color);
+}
+
 .logo a {
     font-family: var(--headline-font);
     font-size: 1.8rem;
