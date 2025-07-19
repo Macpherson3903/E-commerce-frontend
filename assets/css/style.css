@@ -38,12 +38,27 @@ header {
     position: relative;
 }
 
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+}
+
 .logo a {
-    font-family: var(--headline-font);
+    font-family: "Iceberg", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
     font-size: 2rem;
-    font-weight: 700;
     color: var(--headline-color);
     text-decoration: none;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
 }
 
 .highlight {
@@ -202,9 +217,9 @@ header {
         text-align: left;
     }
 
-        .nav-item:hover::after {
-            width: 35%;   
-        }
+    .nav-item:hover::after {
+        width: 35%;
+    }
 
     header .container {
         flex-direction: column;
@@ -1111,9 +1126,10 @@ header {
 }
 
 .footer-logo {
+    font-family: 'Iceberg', sans-serif;
+    font-weight: bold;
     font-size: 2rem;
     color: white;
-    font-family: var(--headline-font);
 }
 
 .footer-contact p,
