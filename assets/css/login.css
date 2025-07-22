@@ -1,14 +1,21 @@
-body {
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Open Sans', sans-serif;
     background-image: url('/assets/images/login-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.login-section{
+    display: flex;
 }
 
 
@@ -82,6 +89,10 @@ body {
         animation: slideDown 1s ease forwards;
     }
 
+    .login-section{
+        display: block;
+    }
+
     .diagonal-content {
         padding: 20px 15px;
         text-align: center;
@@ -114,22 +125,13 @@ body {
     }
 }
 
-/* Make space for login form on the right */
-.login-container {
-    margin-left: 40%;
-    /* match .diagonal width */
-    padding: 40px;
-}
-
 .login-container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .login-title {

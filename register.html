@@ -18,9 +18,7 @@
 
 <body>
 
-
-    <!-- Main Content -->
-    <main class="container register-container animate-fade">
+    <section class="register-section">
         <!-- Diagonal style for Register Page -->
         <div class="diagonal">
             <div class="diagonal-content">
@@ -29,42 +27,44 @@
                 <p>Join SWISSTools today and get access to the best tools at unbeatable prices.</p>
             </div>
         </div>
-
-        <h1 class="register-title">Register</h1>
-        <div class="register-form-container">
-            <button type="button" class="btn btn-email-register"><i class="fas fa-envelope"></i> Register with
-                Email</button>
-            <form class="register-form">
-                <div class="form-group">
-                    <label for="username"><i class="fas fa-user"></i> Username</label>
-                    <input type="text" id="username" required placeholder="Enter your username">
+        <!-- Main Content -->
+        <main class="container register-container animate-fade">
+            <div class="register-form-container">
+                <h1 class="register-title">Register</h1>
+                <button type="button" class="btn btn-email-register"><i class="fas fa-envelope"></i> Register with
+                    Email</button>
+                <form class="register-form">
+                    <div class="form-group">
+                        <label for="username"><i class="fas fa-user"></i> Username</label>
+                        <input type="text" id="username" required placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="password" required placeholder="Enter your password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                        <input type="password" id="confirm-password" required placeholder="Confirm your password">
+                    </div>
+                    <div class="form-options">
+                        <p>Already have an account? <a href="login.html">Login</a></p>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</button>
+                </form>
+                <div class="social-login">
+                    <p>Or register with:</p>
+                    <div class="social-buttons">
+                        <button type="button" class="btn btn-social btn-google" title="Register with Google"><i
+                                class="fab fa-google"></i></button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                    <input type="email" id="email" required placeholder="Enter your email">
-                </div>
-                <div class="form-group">
-                    <label for="password"><i class="fas fa-lock"></i> Password</label>
-                    <input type="password" id="password" required placeholder="Enter your password">
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
-                    <input type="password" id="confirm-password" required placeholder="Confirm your password">
-                </div>
-                <div class="form-options">
-                    <p>Already have an account? <a href="login.html">Login</a></p>
-                </div>
-                <button type="submit" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</button>
-            </form>
-        </div>
-        <div class="social-login">
-            <p>Or register with:</p>
-            <div class="social-buttons">
-                <button type="button" class="btn btn-social btn-google" title="Register with Google"><i
-                        class="fab fa-google"></i></button>
             </div>
-        </div>
-    </main>
+        </main>
+    </section>
 
     <!-- JavaScript -->
     <script type="importmap">
