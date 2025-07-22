@@ -228,7 +228,7 @@ header {
     }
 
     .header-two .container {
-        margin-top: 30px;
+        margin-top: 5px;
     }
 
     .header-extras {
@@ -272,6 +272,7 @@ header {
     font-weight: 700;
     color: var(--headline-color);
     text-decoration: none;
+    padding: 0 40px;
 }
 
 .header-two .container {
@@ -396,8 +397,8 @@ header {
 @media (max-width: 768px) {
     .header-two .container {
         flex-direction: column;
-        align-items: stretch;
-        padding: 0 20px;
+        align-items: center;
+        justify-content: center;
     }
 
     .search-bar {

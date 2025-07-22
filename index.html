@@ -82,30 +82,32 @@
             </div>
         </div>
 
-        <!-- header-two which contains the category select button and search bar -->
-        <div class="header-two">
-            <div class="container">
-                <!-- Custom Dropdown -->
-                <div class="custom-dropdown" id="categoryDropdown">
-                    <div class="dropdown-selected">All Categories</div>
-                    <ul class="dropdown-options">
-                        <li data-value="all">All Categories</li>
-                        <li data-value="electronics">Electronics</li>
-                        <li data-value="fashion">Fashion</li>
-                        <li data-value="home">Home &amp; Garden</li>
-                    </ul>
-                </div>
-                <!-- Search Bar -->
-                <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Search for products, brands and more...">
-                    <button type="submit" onclick="searchPage()">
-                        <span class="visually-hidden">Search</span>
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
+        
+    </header>
+
+    <!-- header-two which contains the category select button and search bar -->
+    <div class="header-two">
+        <div class="container">
+            <!-- Custom Dropdown -->
+            <div class="custom-dropdown" id="categoryDropdown">
+                <div class="dropdown-selected">All Categories</div>
+                <ul class="dropdown-options">
+                    <li data-value="all">All Categories</li>
+                    <li data-value="electronics">Electronics</li>
+                    <li data-value="fashion">Fashion</li>
+                    <li data-value="home">Home &amp; Garden</li>
+                </ul>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for products, brands and more...">
+                <button type="submit" onclick="searchPage()">
+                    <span class="visually-hidden">Search</span>
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- Main Section -->
     <main class="hero-section">
@@ -479,7 +481,7 @@
                 </div>
             </div>
             <a href="shop.html" class="cta-button">Explore Tools Now</a>
-            <p class="cta-subtext">Join our community for exclusive offers and tips!</p>
+            <!-- <p class="cta-subtext">Join our community for exclusive offers and tips!</p> -->
         </div>
         <canvas id="particle-canvas"></canvas>
     </section>
