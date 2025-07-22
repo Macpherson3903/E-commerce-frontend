@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Orders - SWISSTools</title>
-    <link rel="stylesheet" href="assets/css/users_orders.css">
+    <link rel="stylesheet" href="../assets/css/users_orders.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/swisstools_logo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/744870fa52.js" crossorigin="anonymous"></script>
@@ -21,9 +26,11 @@
     <!-- Header -->
     <header class="sticky-header">
         <div class="container">
-            <div class="logo">
-                <a href="../index.html">SWISS<span class="highlight">Tools</span></a>
-            </div>
+            <!-- Logo -->
+                <div class="logo animate-logo">
+                    <img src="../assets/images/swisstools_logo.png" alt="Logo picture" class="logo-img">
+                    <a href="index.html" class="logo-text">SWISS<span class="highlight">Tools</span></a>
+                </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars menu-icon"></i>
             </div>
@@ -231,6 +238,6 @@
     <script type="importmap">
         {"imports":{"gsap":"https://cdn.skypack.dev/gsap","gsap/ScrollTrigger":"https://cdn.skypack.dev/gsap/ScrollTrigger"}}
     </script>
-    <script type="module" src="assets/js/users_orders.js"></script>
+    <script type="module" src="../assets/js/users_orders.js"></script>
 </body>
 </html>

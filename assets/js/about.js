@@ -134,15 +134,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Team section animation
-    gsap.from(".team-member", {
+    // About Boss section animation
+    gsap.from([".boss-info", ".boss-details"], {
         opacity: 0,
-        scale: 0.8,
-        duration: 0.8,
-        stagger: 0.2,
+        y: 50,
+        duration: 1,
+        stagger: 0.3,
         scrollTrigger: {
-            trigger: ".team-grid",
-            start: "top 80%"
+            trigger: ".about-boss",
+            start: "top 80%",
+            toggleActions: "play none none none"
         }
     });
 
