@@ -9,7 +9,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .register-container {
@@ -234,8 +233,44 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-@media and (max-width: 768px) {
+@media (max-width: 768px) {
     .diagonal {
-        display: none;
+        width: 100%;
+        height: 60vh;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        position: relative;
+        padding-top: 40px;
+        animation: slideDown 1s ease forwards;
+    }
+
+    .diagonal-content {
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .diagonal-content .logo-img {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .diagonal-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .diagonal-content p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
