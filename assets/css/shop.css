@@ -240,7 +240,7 @@ header {
     header .container {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 5px;
     }
 
     .header-two .container {
@@ -251,7 +251,7 @@ header {
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 5px;
         width: 100%;
     }
 
